@@ -1,0 +1,100 @@
+import java.util.*;
+//import java.Date;
+import java.text.SimpleDateFormat;
+class visitor
+{
+	Scanner sc=new Scanner(System.in);
+	visitor()
+	{
+	}
+	 void entry()
+	{
+		System.out.println("Welcome to Ayodhya Shelter Home!!!!!!!!!! :)-");
+	}
+	void generalDetails()
+	{
+		System.out.println("enter your Name, Address and phone number for security purpose");
+		String name= sc.nextLine();		
+		String Address=sc.nextLine();
+		long mbNumber=sc.nextLong();
+		System.out.println("your details are :"+"\n"+"Name is: "+name+"\nAddress is :"+Address+"\n"+"Moblile number :"+mbNumber);
+	}
+	void choice()
+	{
+		System.out.println("enter 1 for Food Distribution \n 2 for Other Dispensiries \n 3 for Donation(money)");
+		int ch=sc.nextInt();
+		switch(ch)
+		{
+			default:
+			System.out.println("enter choice properly");
+			case 1:
+			System.out.println("You can distribute the food in between 12 pm and 2 pm");
+			 break;
+            case 2:
+             System.out.println("You can distribute items in between 2.30 pm and 4.30 pm");
+			 break;
+            case 3:
+            System.out.println("enter money into general details form");
+			break;
+		}			
+	}
+}
+/*
+class Food extends visitor        // sir la vicharaych ahe 
+{
+	int ch;
+	Food()
+	{
+		this.ch=ch;
+	}
+	void choice1()
+	{
+		System.out.println("you>>>>>>>>>>>>>>>");
+		//super.choice();
+		if(ch==1)
+		{
+			System.out.println("you>>>>>>>>>>>>>>>");
+		}
+	}
+}
+//class other extends visitor
+//{
+	
+//}
+//class donation extends visitor
+//{
+	
+//}*/
+class project
+{
+	
+	public static void main(String rags[])
+	{
+		visitor v1=new visitor();
+		Food v2=new Fod();
+		
+		Scanner sc=new Scanner(System.in);
+		{
+			System.out.println("You arrived at :");
+			//String timeStamp=new SimpleDateFormat("HHmmss").format(Calendar.getInstance().getTime());
+		      //System.out.println(timeStamp);
+			  
+			int time=sc.nextInt();
+			if(time<5&&time<10)
+			{
+				System.out.println("you can enter");
+				v1.entry();
+				v1.generalDetails();
+				v1.choice();
+				v2.choice1();
+			}
+		    else
+			System.out.println("time is over you cannot visit here!!!");
+		}
+		
+		
+		
+		
+		
+	}
+}
